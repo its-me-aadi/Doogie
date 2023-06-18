@@ -76,7 +76,7 @@ function Home() {
                             {foodList.map((foodlis, index) => {
                                 return (
                                     (foodcat.CategoryName === foodlis.CategoryName && foodlis.name.toLowerCase().includes(searchItem.toLocaleLowerCase())) &&
-                                    <Card key={index} id={index} image={foodlis.img} title={foodlis.name} category={foodlis.CategoryName} options={foodlis.options[0]} className="col-12 col-md-6 col-lg-3" />
+                                    <Card key={index} foodItem={foodlis} options={foodlis.options[0]} className="col-12 col-md-6 col-lg-3" />
                                 )
                             })}
                         </div>

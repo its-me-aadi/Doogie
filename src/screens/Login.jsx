@@ -25,7 +25,7 @@ async function handleSubmit(event){
         alert("Invalid Data");
     }
     else{
-        alert("gaand marao");
+        alert("Success");
         localStorage.setItem("authToken",json.authToken);
         // console.log(localStorage.setItem("authToken"));
         navigate("/");
