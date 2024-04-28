@@ -8,20 +8,19 @@ import Card from "../components/card";
 
 function Home() {
     const [searchItem,setSearchItem]=useState("");
-    const [foodCategory, setFoodCategory] = useState([]);
-    const [foodList, setFoodList] = useState([]);
+    const [dogsBreed, setdogsBreed] = useState([]);
+    const [dogsData, setdogsData] = useState([]);
 
     async function loadData() {
-        fetch("http://localhost:5000/api/foodData", {
+        fetch("http://localhost:5000/api/dogsData", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             }
         }).then(async (response) => {
             response = await response.json();
-            // console.log(response[0],response[1]);
-            setFoodList(response[0]);
-            setFoodCategory(response[1]);
+            setdogsData(response[0]);
+            setdogsBreed(response[1]);
         });
 
 
@@ -48,13 +47,13 @@ function Home() {
                             </div>
                         </div>
                         <div className="carousel-item active">
-                            <img src="https://source.unsplash.com/random/300x300/?burger" style={{ filter: "brightness(30%)" }} className="d-block w-100" alt="..." />
+                            <img src="https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2018/04/26/Pictures/_92672142-493d-11e8-8699-4e17514b3033.jpg" style={{ filter: "brightness(30%)" }} className="d-block w-100" alt="..." />
                         </div>
                         <div className="carousel-item">
-                            <img src="https://source.unsplash.com/random/300x300/?pastry" style={{ filter: "brightness(30%)" }} className="d-block w-100" alt="..." />
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWSF4EeMCUgnjk9BDmTl_z2qZEspYXJMAzgpR6m5veMw&s" style={{ filter: "brightness(30%)" }} className="d-block w-100" alt="..." />
                         </div>
                         <div className="carousel-item">
-                            <img src="https://source.unsplash.com/random/300x300/?barbeque" style={{ filter: "brightness(30%)" }} className="d-block w-100" alt="..." />
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY3zPYbvyMFgRJv08JR28g82MuwRMyzIr3lZuWNfCxwg&s" style={{ filter: "brightness(30%)" }} className="d-block w-100" alt="..." />
                         </div>
                     </div>
                     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -68,18 +67,19 @@ function Home() {
                 </div>
             </div>
             <div className="mg-3">
-                {foodCategory.map(foodcat => {
+                {dogsBreed.map(dogB => {
                     return (
+                        (dogB.CategoryName.toLowerCase().includes(searchItem.toLocaleLowerCase()) && 
                         <div className="row mb-3">
-                            <h1 className="fs-3 ms-3">{foodcat.CategoryName}</h1>
+                            <h1 className="fs-3 ms-3">{dogB.CategoryName}</h1>
                             <hr></hr>
-                            {foodList.map((foodlis, index) => {
+                            {dogsData.map((dog, index) => {
                                 return (
-                                    (foodcat.CategoryName === foodlis.CategoryName && foodlis.name.toLowerCase().includes(searchItem.toLocaleLowerCase())) &&
-                                    <Card key={index} foodItem={foodlis} options={foodlis.options[0]} className="col-12 col-md-6 col-lg-3" />
+                                    (dogB.CategoryName === dog.Breed && dog.Breed.toLowerCase().includes(searchItem.toLocaleLowerCase())) &&
+                                    <Card key={index}  k={index} data={dog} className="col-12 col-md-6 col-lg-3"/>
                                 )
                             })}
-                        </div>
+                        </div>)
                     )
 
                 })

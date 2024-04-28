@@ -27,6 +27,7 @@ async function handleSubmit(event){
     else{
         alert("Success");
         localStorage.setItem("authToken",json.authToken);
+        localStorage.setItem("userEmail",credentials.email);
         // console.log(localStorage.setItem("authToken"));
         navigate("/");
     }

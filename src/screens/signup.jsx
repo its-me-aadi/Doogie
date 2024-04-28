@@ -27,7 +27,7 @@ async function handleSubmit(event){
         alert("Invalid Data");
     }
     else{
-        alert("gaand marao");
+        alert("Success");
         navigate("/login");
     }
 }

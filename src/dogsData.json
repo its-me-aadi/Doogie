@@ -1,0 +1,86 @@
+[
+    {
+        "Breed": "Siberian Husky",
+        "name": "Aditya",
+        "img": "https://img.freepik.com/premium-photo/siberian-husky-dog-cute-wolf-winter-forest-snow-closeup_112397-31.jpg",
+        "location": "Jaipur, Rajasthan"
+    },
+    {
+        "Breed": "German Shepherd",
+        "name": "Preet",
+        "img": "https://i.pinimg.com/736x/cd/42/66/cd42665c3c1e76d82a4ebe9439eebcbb.jpg",
+        "location": "Kota, Rajasthan"
+    },
+    {
+        "Breed": "German Shepherd",
+        "name": "Padam",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgXl444-evAzR4YPVRvPo3uLRB9YFF-IcOWDkGv1Rewg&s",
+        "location": "Kolkata, Bengal"
+    },
+    {
+        "Breed": "German Shepherd",
+        "name": "Meet",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY86GSV1nDBjDevsx9s4isDrbPz8iCPUkVmhQpByg9Hg&s",
+        "location": "Rajkot, Gujarat"
+    },
+    {
+        "Breed": "German Shepherd",
+        "name": "Dhyey",
+        "img": "https://i.pinimg.com/564x/f0/c6/83/f0c683adbfef2c69b50c8ed2a95dd692.jpg",
+        "location": "Rajkot, Gujarat"
+    },
+    {
+        "Breed": "Bulldog",
+        "name": "Yash",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSVYWwecj1SjxbTV53HkGJyAODlGsehK3J5iMiH-QCfg&s",
+        "location": "Sarojini, Delhi"
+    },
+    {
+        "Breed": "Bulldog",
+        "name": "Harsh",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVPR0eJb4Ulm7SpdVcpYpuo2fF_AVIuddYyYRPOotS3w&s",
+        "location": "Tatanagar, UP"
+    },
+    {
+        "Breed": "Bulldog",
+        "name": "Pankaj",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGihZdH3-HcJPNwMcGccYNNvffNzLvvr5X_Sn9fjyAJw&s",
+        "location": "Tatanagar, UP"
+    },
+    {
+        "Breed": "Bulldog",
+        "name": "Swayam",
+        "img": "https://www.shutterstock.com/image-photo/cute-small-american-bulldog-puppie-600nw-1696221838.jpg",
+        "location": "Odisha"
+    },
+    {
+        "Breed": "Indian pariah dog",
+        "name": "Mayur",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd0I923PzG51E3m65lJ0TSBDpzWkAixrY62HXpqVaKNA&s",
+        "location": "Surat, Gujarat"
+    },
+    {
+        "Breed": "Indian pariah dog",
+        "name": "Harsh",
+        "img": "https://images.hindustantimes.com/img/2022/09/07/550x309/ashwini-chaudhary-monty-fSGSAaxzXfM-unsplash_1662535327381_1662535398649_1662535398649.jpg",
+        "location": "Agra"
+    },
+    {
+        "Breed": "Indian pariah dog",
+        "name": "Anmol",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZQd5a8UO5qCThFrhUvs6y7teUqk5pSik1BYqGsY8LPg&s",
+        "location": "Jharkhand, UP"
+    },
+    {
+        "Breed": "Pug",
+        "name": "Aayush",
+        "img": "https://ichef.bbci.co.uk/news/480/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg.webp",
+        "location": "Jaipur, Rajasthan"
+    },
+    {
+        "Breed": "German Shepherd",
+        "name": "Dorlikar",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyyplvGqlFlxHH1_JDqmVb6L9Agd9mpwTT15Z_ZsdtMA&s",
+        "location": "Dharavi, Mumbai"
+    }
+]

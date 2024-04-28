@@ -18,6 +18,9 @@ app.use((req,res,next)=>{
 app.use(express.json());
 app.use('/api',require("./Routes/CreateUser"));
 app.use('/api',require("./Routes/DisplayData"));
+app.use('/api',require("./Routes/Form"));
+app.use('/api',require("./Routes/displayApplications"));
+app.use('/api',require("./Routes/displayAdoptions"));
 app.get("/",(req,res)=>{
     res.send("Jay shree ram");
 })
