@@ -1,5 +1,5 @@
-Languages Used: JS
-Web Technologies Used: HTML,CSS, JS,ReactJs, NodeJs,ExpressJs,Mongoose
+Languages Used: JS<br>
+Web Technologies Used: HTML,CSS, JS,ReactJs, NodeJs,ExpressJs,Mongoose<br>
 Database: MongoDB
 
 Steps to run on your pc:
