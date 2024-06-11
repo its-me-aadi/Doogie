@@ -1,0 +1,7 @@
+.hero-div{
+    margin-top: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}

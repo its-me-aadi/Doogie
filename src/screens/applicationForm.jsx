@@ -49,7 +49,7 @@ export default function ApplicationForm() {
             setInvalidMessage("Please enter a proper name");
             setValidFlag(false);
         }
-        else if (credentials.phoneNum.length != 10) {
+        else if (credentials.phoneNum.length !==10) {
             setInvalidMessage("Please enter a valid phone number");
             setValidFlag(false);
         }
@@ -71,7 +71,7 @@ export default function ApplicationForm() {
             }
             else{
                 alert("Success");
-                navigate("/");
+                navigate("/applications");
             }
         }
     }

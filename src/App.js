@@ -5,6 +5,7 @@ import Login from "./screens/Login";
 import Applications from "./screens/MyApplications.jsx";
 import Adoptions from "./screens/MyAdoptions.jsx";
 import ApplicationForm from "./screens/applicationForm.jsx";
+import AdoptionPage from "./screens/AdoptionPage.jsx";
 import {
   BrowserRouter as Router,
   Routes,
@@ -27,6 +28,7 @@ function App() {
           <Route path="/applications" element={<Applications />}/>
           <Route path="/adoptions" element={<Adoptions />}/>
           <Route path="/application" element={<ApplicationForm/>}/>
+          <Route path="/adopt" element={<AdoptionPage/>}/>
         </Routes>
       </div>
     </Router>

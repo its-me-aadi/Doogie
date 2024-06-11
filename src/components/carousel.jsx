@@ -1,23 +1,25 @@
 import React from "react";
+import IMG1 from "../assets/p1.jpg";
+import IMG2 from "../assets/p2.png";
+import IMG3 from "../assets/p3.jpg";
 
-function Carousel() {
+function Carousel(props) {
     return (
-        <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel" style={{objectFit:"contain !important"}}>
-            <div className="carousel-inner" style={{maxHeight:"500px"}}>
-                <div className="carousel-caption d-none d-md-block" style={{zIndex:"10"}}>
-                    <form class="d-flex">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button class="btn btn-outline-success text-white bg-success" type="submit">Search</button>
-                    </form>
+        <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel" style={{ objectFit: "contain !important" }}>
+            <div className="carousel-inner" style={{ maxHeight: "500px" }}>
+                <div className="carousel-caption d-none d-md-block" style={{ zIndex: "10" }}>
+                    <div class="d-flex justify-content-center">
+                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={props.func} value={props.val} />
+                    </div>
                 </div>
                 <div className="carousel-item active">
-                    <img src="https://source.unsplash.com/random/300x300/?burger" style={{filter:"brightness(30%)"}} className="d-block w-100" alt="..." />
+                    <img src={IMG1} style={{ filter: "brightness(30%)" }} className="d-block w-100" alt="..." />
                 </div>
                 <div className="carousel-item">
-                    <img src="https://source.unsplash.com/random/300x300/?pastry"  style={{filter:"brightness(30%)"}} className="d-block w-100" alt="..." />
+                    <img src={IMG2} style={{ filter: "brightness(30%)" }} className="d-block w-100" alt="..." />
                 </div>
                 <div className="carousel-item">
-                    <img src="https://source.unsplash.com/random/300x300/?barbeque"  style={{filter:"brightness(30%)"}} className="d-block w-100" alt="..." />
+                    <img src={IMG3} style={{ filter: "brightness(30%)" }} className="d-block w-100" alt="..." />
                 </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">

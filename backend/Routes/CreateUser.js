@@ -33,7 +33,13 @@ app.post("/createuser",
       catch(err){
         console.log(err);
         res.json({success:false});
-      } 
+      }
+      User.findOne({email:req.body.email})
+      .then((foundUser)=>{
+        if(foundUser){
+          return res.json({success:false,errors:[{msg:"Already a User"}]});
+        }
+      }) 
     }
      
 );
@@ -62,14 +68,14 @@ app.post("/login",
               res.json({success:true,authToken:authToken});
             }
             else{
-              return res.status(400).json({errors: "Try logging in with correct password"});
+              return res.status(400).json({errors: "Incorrect Password"});
             }
 
         });
           
         }
         else{
-          return res.status(400).json({errors: "Try logging in with correct email"});
+          return res.status(400).json({errors: "User not found"});
         }
 
       })

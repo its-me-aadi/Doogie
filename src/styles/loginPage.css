@@ -1,0 +1,14 @@
+.errorMessage{
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    color: red;
+}
+.successMessage{
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    color: green;
+}
