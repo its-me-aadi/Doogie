@@ -3,12 +3,12 @@ import { Link, useNavigate } from "react-router-dom";
 
 function Navbar() {
 
-  const navigate=useNavigate();
+  // const navigate=useNavigate();
 
-  function Logout(){
-    localStorage.removeItem("authToken");
-    navigate("/");
-  }
+  // function Logout(){
+  //   localStorage.removeItem("authToken");
+  //   navigate("/");
+  // }
 
   return (
     <div>
@@ -31,9 +31,9 @@ function Navbar() {
       </div>
       :
       <div>
-        <Link className="btn bg-white text-success mx-1" to="/adoptions">My Adoptions</Link>
-        <Link className="btn bg-white text-success mx-1" to="/adoptions">My Account</Link>
-        <div className="btn bg-white text-danger mx-1" onClick={Logout}>Logout</div>
+        {/* <Link className="btn bg-white text-success mx-1" to="/adoptions">My Adoptions</Link> */}
+        <Link className="btn bg-white text-success mx-1" to="/user">My Account</Link>
+        {/* <div className="btn bg-white text-danger mx-1" onClick={Logout}>Logout</div> */}
       </div>
       }
     </div>

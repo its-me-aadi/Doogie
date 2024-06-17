@@ -46,7 +46,7 @@ export default function Applications() {
             </div>
             <div style={{ display: "flex", justifyContent: "center",alignItems:"center"}}>
               <button type="submit" className="btn btn-success" onClick={() => {
-                navigate("/");
+                navigate("/adopt");
               }}>Adopt</button>
               <lottie-player src="https://lottie.host/38c2d828-4596-4e32-8880-9addfbd4ff22/kg6pTwEcnL.json"  background="transparent"  speed="1"  style={{ width: "10rem", height: "10rem"}}  className='about-animation' loop  autoplay></lottie-player>
             </div>

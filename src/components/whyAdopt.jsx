@@ -14,7 +14,6 @@ export default function whyAdopt() {
             </div>
             <div className='reasons'>
                     {reasons.map(reason => {
-                        console.log(reason);
                         return (
                             <p>{reason}</p>
                         )

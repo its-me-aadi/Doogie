@@ -6,6 +6,8 @@ import Applications from "./screens/MyApplications.jsx";
 import Adoptions from "./screens/MyAdoptions.jsx";
 import ApplicationForm from "./screens/applicationForm.jsx";
 import AdoptionPage from "./screens/AdoptionPage.jsx";
+import MyAcc from "./screens/MyAcc.jsx";
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -15,6 +17,7 @@ import {
 import "../node_modules/bootstrap-dark-5/dist/css/bootstrap-dark.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+
 
 
 function App() {
@@ -29,6 +32,7 @@ function App() {
           <Route path="/adoptions" element={<Adoptions />}/>
           <Route path="/application" element={<ApplicationForm/>}/>
           <Route path="/adopt" element={<AdoptionPage/>}/>
+          <Route path="/user" element={<MyAcc/>}/>
         </Routes>
       </div>
     </Router>

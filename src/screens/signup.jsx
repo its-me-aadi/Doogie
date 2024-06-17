@@ -1,6 +1,9 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState,useEffect } from "react";
+import { Link,  json,useNavigate } from "react-router-dom";
 import "../styles/loginPage.css"
+// import { GoogleLogin } from '@react-oauth/google';
+// import { GoogleOAuthProvider } from '@react-oauth/google';
+// import { jwtDecode } from "jwt-decode";
 
 function Signup() {
     const navigate = useNavigate();
@@ -46,7 +49,35 @@ function Signup() {
         })
 
     }
-
+    // async function SignUpGoogle(mail,nme){
+    //     console.log(nme,mail);
+    //     const response = await fetch("http://localhost:5000/api/createGoogleUser", {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //             // 'Content-Type': 'application/x-www-form-urlencoded',
+    //         },
+    //         body: JSON.stringify({ name:nme, email:mail})
+    //     });
+    //     const jsonData = await response.json();
+    //     console.log(jsonData);
+    //     if (!jsonData.success) {
+    //         setMessage(jsonData.errors[0].msg);
+    //         setMessageClass("errorMessage");
+    //     }
+    //     else {
+    //         setMessage("Success");
+    //         setMessageClass("successMessage");
+    //         localStorage.setItem("authToken", json.authToken);
+    //         localStorage.setItem("userEmail", mail);
+    //         console.log(localStorage.getItem("userEmail"));
+    //         navigate("/");
+    //     }
+    // }
+    useEffect(() => {
+        if (localStorage.getItem("authToken"))
+            navigate("/")
+    }, [])
     return (
         <>
             {message && <h1 className={messageClass}>{message}</h1>}
@@ -71,6 +102,19 @@ function Signup() {
                     <button type="submit" className="btn btn-success">Submit</button>
                     <Link to="/login" className="m-3 btn btn-danger">Already a User</Link>
                 </form>
+                {/* <GoogleOAuthProvider clientId="974043168419-q18pohug8nlnqcfsavtvh1ctggg9g2jk.apps.googleusercontent.com" >
+                        <GoogleLogin
+                            onSuccess={credentialResponse => {
+                                // console.log(credentialResponse)
+                                const decoded = jwtDecode(credentialResponse?.credential);
+                                // console.log(decoded.email);
+                                SignUpGoogle(decoded.email,decoded.name);
+                            }}
+                            onError={() => {
+                                console.log('Login Failed');
+                            }}
+                        />
+                    </GoogleOAuthProvider> */}
             </div>
         </>)
 }
