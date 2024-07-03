@@ -1,0 +1,48 @@
+
+#card-adopt {
+  margin: 2%;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 360px;
+  overflow: hidden;
+  text-align: center;
+}
+
+#card-adopt img {
+  width: 100%;
+  transform: scale(1.1);
+  height: 46%;
+}
+
+#card-adopt h1 {
+  font-size: 2em;
+  margin: 0.5em 0;
+  color: #4caf50;
+}
+
+#card-adopt p {
+  margin: 0.5em 0;
+  color: #777777;
+}
+
+#card-adopt .location {
+  margin: 1em 0;
+  color: #888888;
+  font-weight: bold;
+}
+
+#card-adopt button {
+  background: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#card-adopt button:hover {
+  background: #45a049;
+}

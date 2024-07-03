@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import "../styles/form.css"
-
+import formImg from "../assets/formImg.jpg"
 
 export default function ApplicationForm() {
     const navigate = useNavigate();
@@ -49,11 +49,11 @@ export default function ApplicationForm() {
             setInvalidMessage("Please enter a proper name");
             setValidFlag(false);
         }
-        else if (credentials.phoneNum.length !==10) {
+        else if (credentials.phoneNum.length !== 10) {
             setInvalidMessage("Please enter a valid phone number");
             setValidFlag(false);
         }
-        else if (credentials.address.length < 20) {
+        else if (credentials.address.length < 10) {
             setInvalidMessage("Please enter a valid address");
             setValidFlag(false);
         }
@@ -63,20 +63,25 @@ export default function ApplicationForm() {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({ name: credentials.name, email: credentials.email, phoneNum: credentials.phoneNum, location: credentials.address,dogData:dogsData[doggieKey] })
+                body: JSON.stringify({ name: credentials.name, email: credentials.email, phoneNum: credentials.phoneNum, location: credentials.address, dogData: dogsData[doggieKey] })
             });
-            const jsonData=await response.json();
-            if(!jsonData.success){
+            const jsonData = await response.json();
+            if (!jsonData.success) {
                 alert("Invalid Data");
             }
-            else{
+            else {
                 alert("Success");
                 navigate("/applications");
             }
         }
     }
+    const IMgSrc="https://img.freepik.com/premium-photo/cartoon-boy-dog-sitting-sidewalk-city-generative-ai_902846-28220.jpg"
     return (
         <div className='main-div'>
+            <div>
+                {/* <img src={formImg} alt="login_img" className='login-image' /> */}
+                <img src={IMgSrc} alt="login_img" className='login-image' />
+            </div>
             <div className='credentials-div'>
                 <div>
                     {!validFlag && <p style={{ color: "red" }}>{invalidMessage}</p>}
@@ -105,5 +110,42 @@ export default function ApplicationForm() {
                 </div>
             </div>
         </div>
+        ////////////////////////////////////
+        //     <div className='main-div'>
+        //   <div>
+        //     <img src={LGIMAGE} alt="login_img" className='login-image' />
+        //   </div>
+        //   <div className='credentials-div'>
+        //     <div>
+        //       <h2>Login</h2>
+        //     </div>
+        //     <div>
+        //       <p>E-mail address</p>
+        //       <input type='email' name="email" value={credentials.email} onChange={change} />
+        //     </div>
+        //     <div>
+        //       <p>Password</p>
+        //       <input type='password' name="password" value={credentials.password} onChange={change} />
+        //     </div>
+        //     <div>
+        //       <Button variant="contained" color="success" onClick={()=>{
+        //         navigate("/");
+        //       }}>
+        //         Login
+        //       </Button>
+        //     </div>
+        //     <div style={{ flexDirection: 'row' }}>
+        //       <hr style={{ width: "40%" }}></hr>OR
+        //       <hr style={{ width: "40%" }}></hr>
+        //     </div>
+        //     <div>
+        //         <Button variant="outlined" color="error" onClick={()=>{
+        //           navigate("/register");
+        //         }}> 
+        //         Register
+        //         </Button>
+        //     </div>
+        //   </div>
+        // </div>
     )
 }

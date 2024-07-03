@@ -1,0 +1,37 @@
+.stepsToAdopt {
+    margin: 14% 0% 14% 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.stepsToAdopt h1 {
+    color: #00bc8c;
+    font-size: 40px;
+}
+
+.img-textdiv {
+    display: flex;
+    justify-content: center;
+}
+
+.stepsAdoptimgDiv {
+    width: 40%;
+    margin-right: 7%;
+}
+
+.stepsAdopt {
+    font-family: "Montserrat", sans-serif;
+    font-size: 19.4px;
+    display: flex;
+    flex-direction: column;
+    line-height: 37px;
+    justify-content: space-evenly;
+    width: 50%;
+    height: 300px;
+}
+
+.stepsAdopt p {
+   width: 100%;
+}

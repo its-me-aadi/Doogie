@@ -1,9 +1,14 @@
 
 .whyAdopt{
-    margin-top: 5%;
+    margin: 14% 0% 14% 0%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+}
+.whyAdopt h1{
+    color: #00bc8c;
+    font-size: 40px;
 }
 .img-textdiv{
     display: flex;
@@ -11,12 +16,15 @@
 }
 .AdoptMeimgDiv{
     width: 30%;
+    margin-right: 7%;
 }
 .adoptMeimg{
     width: 400px;
     height: 400px;
 }
 .reasons{
+    font-family: "Montserrat", sans-serif;
+    font-size: 19.4px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

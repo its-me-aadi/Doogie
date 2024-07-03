@@ -6,15 +6,24 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import "../styles/review.css";
-import User from "../assets/user.svg";
+import JinWoo from "../assets/Profile Pics/JinWoo.jpg"
+import Nezuko from "../assets/Profile Pics/nezuko2.jpeg"
+import Asta from "../assets/Profile Pics/Asta.jpeg"
+import Goku from "../assets/Profile Pics/goku.jpeg"
+import Dog1 from "../assets/Profile Pics/dog1.jpg"
+import Dog2 from "../assets/Profile Pics/dog2.jpg"
+import Kakashi from "../assets/Profile Pics/kakashi.jpeg"
+import AoiSan from "../assets/Profile Pics/aoi.jpeg"
 import ReviewData from "../reviews.json"
 
 function Review() {
+    const profilePics=[JinWoo,AoiSan,Asta,Goku,Dog1,Dog2,Kakashi,Nezuko]
+
     return (
         <React.Fragment>
             <div className="rvw-main-div">
                 <div className="rvw-head">
-                    <p>Doogie Reviews</p>
+                    <p style={{color:"#00bc8c"}}>Doogie Reviews</p>
                     <hr className="rvw-hr" />
                 </div>
                 <div className="rvw-carousel-div">
@@ -45,8 +54,8 @@ function Review() {
                                     <SwiperSlide>
                                         <div className="rvw-card">
                                             <div className='rvw-card-top'>
-                                                <img className='rvw-card-user-img' src={User} alt='user-img' />
-                                                <p className='rvw-card-top-txt'>
+                                                <img className='rvw-card-user-img' src={profilePics[rvw.dp]} alt='user-img' />
+                                                <p className='rvw-card-top-head'>
                                                     {rvw.name}
                                                 </p>
                                             </div>
