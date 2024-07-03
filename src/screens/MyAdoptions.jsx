@@ -7,7 +7,7 @@ export default function Applications() {
   const [isempty, setEmpty] = useState(false);
   const emptyMessage = "Oops! Looks like you don't have any approved applications";
   async function loadData() {
-    await fetch("http://localhost:5000/api/adoptionsData", {
+    await fetch("https://doogie.onrender.com/api/adoptionsData", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

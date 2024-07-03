@@ -7,7 +7,7 @@ export default function Applications() {
   const [isempty, setEmpty] = useState(false);
   const emptyMessage = "Oops! Looks like you haven't submitted any applications yet";
   async function loadData() {
-    await fetch("http://localhost:5000/api/applicationsData", {
+    await fetch("https://doogie.onrender.com/api/applicationsData", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

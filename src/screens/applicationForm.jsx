@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import "../styles/form.css"
-import formImg from "../assets/formImg.jpg"
 
 export default function ApplicationForm() {
     const navigate = useNavigate();
     const [doggieKey, setDoogiekey] = useState();
     const [dogsData, setdogsData] = useState();
     async function loadData() {
-        fetch("http://localhost:5000/api/dogsData", {
+        fetch("https://doogie.onrender.com/api/dogsData", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -58,7 +57,7 @@ export default function ApplicationForm() {
             setValidFlag(false);
         }
         else {
-            const response = await fetch("http://localhost:5000/api/saveFormData", {
+            const response = await fetch("https://doogie.onrender.com/api/saveFormData", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

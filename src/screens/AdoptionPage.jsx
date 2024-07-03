@@ -12,7 +12,7 @@ export default function AdoptionPage() {
     const [dogsData, setdogsData] = useState([]);
 
     async function loadData() {
-        fetch("http://localhost:5000/api/dogsData", {
+        fetch("https://doogie.onrender.com/api/dogsData", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

@@ -15,7 +15,7 @@ function Login() {
     const [messageClass, setMessageClass] = useState();
     async function handleSubmit(event) {
         event.preventDefault();
-        const response = await fetch("http://localhost:5000/api/login", {
+        const response = await fetch("https://doogie.onrender.com/api/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -47,7 +47,7 @@ function Login() {
         })
     }
     async function LoginGoogle(mail){
-        const response = await fetch("http://localhost:5000/api/loginGoogleUser", {
+        const response = await fetch("https://doogie.onrender.com/api/loginGoogleUser", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
