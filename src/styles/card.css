@@ -1,6 +1,6 @@
 
 #card-adopt {
-  margin: 2%;
+  margin: 20px;
   background: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -45,4 +45,81 @@
 
 #card-adopt button:hover {
   background: #45a049;
+}
+
+
+
+@media (max-width: 700px) {
+
+  #card-adopt {
+    border-radius: 10px;
+    width: 260px;
+    height: 320px;
+  }
+  
+  #card-adopt img {
+    width: 100%;
+    transform: scale(1.1);
+    height: 46%;
+  }
+  
+  #card-adopt h1 {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+  }
+  
+  #card-adopt p {
+    margin: 0.5em 0;
+  }
+  
+  #card-adopt .location {
+    margin: 0.8em 0;
+  }
+  
+  #card-adopt button {
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+}
+
+
+
+@media (max-width:550px) {
+
+  #card-adopt {
+  
+    border-radius: 10px;
+    width: 240px;
+    height: 278px;
+  }
+  
+  #card-adopt img {
+    width: 100%;
+    transform: scale(1.11);
+    height: 46%;
+  }
+  
+  #card-adopt h1 {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+  }
+  
+  #card-adopt p {
+    margin: 0.5em 0;
+  }
+  
+  #card-adopt .location {
+    margin: 0.8em 0;
+  }
+  
+  #card-adopt button {
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
 }

@@ -56,8 +56,8 @@ export default function Applications() {
       <div style={{display:"flex", width:"100%",flexWrap:"wrap",justifyContent:"space-evenly"}}>
         {!isempty && applicationsData.map((application, index) => {
           return (
-            <div style={{width:"30%",marginBottom:"4%"}}>
-              <ApplicationCard key={index} dgData={application} />
+            <div className="row mb-12" style={{marginTop:'4%',marginBottom:"2%",justifyContent:"center"}}>
+              <ApplicationCard key={index} dgData={application}/>
             </div>
           )
         })}

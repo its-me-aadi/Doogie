@@ -7,8 +7,8 @@ export default function (props) {
             {props.dogsBreed.map(dogB => {
                 return (
                     (dogB.CategoryName.toLowerCase().includes(props.searchItem.toLocaleLowerCase()) &&
-                        <div className="row mb-12" style={{marginTop:'4%',marginBottom:"2%"}}>
-                            <h1 className="fs-3 ms-3">{dogB.CategoryName}</h1>
+                        <div className="row mb-12" style={{marginTop:'4%',marginBottom:"2%",justifyContent:"center"}}>
+                            <h1 className="fs-3 ms-3" style={{textAlign:"center"}}>{dogB.CategoryName}</h1>
                             <hr></hr>
                             {props.dogsData.map((dog, index) => {
                                 return (

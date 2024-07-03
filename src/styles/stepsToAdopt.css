@@ -10,8 +10,7 @@
     color: #00bc8c;
     font-size: 40px;
 }
-
-.img-textdiv {
+.animation-textdiv {
     display: flex;
     justify-content: center;
 }
@@ -34,4 +33,67 @@
 
 .stepsAdopt p {
    width: 100%;
+}
+
+
+@media only screen and (max-width:1200px) {
+    .stepsToAdopt {
+        margin-bottom: 260px;
+    }
+    .stepsToAdopt {
+        margin-bottom: 10%;
+    }
+    
+    .animation-textdiv {
+        justify-content: space-between;
+    }
+    .stepsAdoptimgDiv{
+        width: 300px;
+        height: 300px;
+    }
+    .stepsAdopt{
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width:1000px) {
+    .stepsToAdopt {
+        margin-bottom: 260px;
+    }
+
+    .stepsAdoptimgDiv{
+        width: 200px;
+        height: 200px;
+    }
+    .stepsAdopt{
+        
+        display: flex;
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width:700px) {
+    .stepsToAdopt {
+        margin-bottom: 260px;
+    }
+
+    .stepsAdoptimgDiv{
+        width: 150px;
+        height: 150px;
+    }
+    .stepsAdopt{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .stepsToAdopt {
+        margin-bottom: 260px;
+    }
+
+    .stepsAdoptimgDiv{
+        width: 100px;
+        height: 100px;
+    }
+    .stepsAdopt{
+        font-size: 13px;
+    }
 }

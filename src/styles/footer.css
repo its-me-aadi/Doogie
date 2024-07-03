@@ -78,3 +78,12 @@
     font-size: 15px;
     font-weight: 400;
 }
+
+@media only screen and (max-width:700px) {
+    .a-email{
+        font-size: 17px;
+    }
+    .a-svgs {
+        transform: scale(1.1);
+    }
+}

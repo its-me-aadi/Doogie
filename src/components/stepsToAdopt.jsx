@@ -8,7 +8,7 @@ export default function whyAdopt() {
         <div className='stepsToAdopt'>
            <h1> Steps to Adopt</h1>
            <hr className="rvw-hr" />    {/* class declared in review section */}
-        <div className='img-textdiv'>
+        <div className='animation-textdiv'>
             <div className='stepsAdoptimgDiv'>
             <lottie-player src="https://lottie.host/cc9ce3b5-c43e-4e5d-b4a9-b093d7a86ed5/rquBdl3YvV.json"  background="transparent"  speed="1"  style={{ width: "8rem", height: "30rem"}}  className='about-animation' loop autoplay></lottie-player>
             </div>
