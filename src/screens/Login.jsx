@@ -46,14 +46,14 @@ function Login() {
 
         })
     }
-    async function LoginGoogle(mail){
+    async function LoginGoogle(mail) {
         const response = await fetch("https://doogie.onrender.com/api/loginGoogleUser", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
                 // 'Content-Type': 'application/x-www-form-urlencoded',
             },
-            body: JSON.stringify({ email: mail})
+            body: JSON.stringify({ email: mail })
         });
         const jsonData = await response.json();
         if (!jsonData.success) {
@@ -64,7 +64,7 @@ function Login() {
             setMessage("Success");
             setMessageClass("successMessage");
             localStorage.setItem("authToken", json.authToken);
-            localStorage.setItem("userEmail",mail);
+            localStorage.setItem("userEmail", mail);
             navigate("/");
         }
     }
@@ -76,32 +76,42 @@ function Login() {
     return (
         <>
             {message && <h1 className={messageClass}>{message}</h1>}
-            <div className="container">
-                <form onSubmit={handleSubmit}>
-                    <div className="mb-3">
-                        <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" value={credentials.email} onChange={onchange} />
+            <div className="container-div">
+                <div className="background-img-div"></div>
+                <form onSubmit={handleSubmit} className="form">
+                    <div className="form-image-div">
+                        <img src="https://wallpapers.com/images/hd/cute-dog-1920-x-1080-background-9kqevqyf8tjf2v24.jpg" className="form-image" />
                     </div>
-                    <div className="mb-3">
-                        <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                        <input type="password" className="form-control" id="exampleInputPassword1" name="password" value={credentials.password} onChange={onchange} />
-                    </div>
-                    <button type="submit" className="btn btn-success">Submit</button>
-                    <Link to="/createuser" className="m-3 btn btn-danger">New User</Link>
-                    <GoogleOAuthProvider clientId="974043168419-q18pohug8nlnqcfsavtvh1ctggg9g2jk.apps.googleusercontent.com" >
-                        <GoogleLogin
-                            onSuccess={credentialResponse => {
-                                // console.log(credentialResponse)
-                                const decoded = jwtDecode(credentialResponse?.credential);
-                                // console.log(decoded);
-                                LoginGoogle(decoded.email);
-                            }}
-                            onError={() => {
-                                console.log('Login Failed');
-                            }}
-                        />
-                    </GoogleOAuthProvider>
+                    <div className="form-inputs-div">
+                        <div className="form-inputs">
+                        <i class="fa-regular fa-envelope"></i>
+                            <input type="email" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" value={credentials.email} onChange={onchange} placeholder="EMAIL" />
+                        </div>
+                        <div className="form-inputs">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="exampleInputPassword1" name="password" value={credentials.password} onChange={onchange} placeholder="PASSWORD" />
+                        </div>
 
+                        <p className="new-user"><Link to="/createuser">New User</Link></p>
+
+                        <div className="login-button">
+                            <button type="submit">Login</button>
+                        </div>
+                        <div className="google-signin-button">
+                            <GoogleOAuthProvider clientId="974043168419-q18pohug8nlnqcfsavtvh1ctggg9g2jk.apps.googleusercontent.com" >
+                                <GoogleLogin
+                                    onSuccess={credentialResponse => {
+                                        const decoded = jwtDecode(credentialResponse?.credential);
+                                        LoginGoogle(decoded.email);
+                                    }}
+                                    onError={() => {
+                                        console.log('Login Failed');
+                                    }}
+                                />
+                            </GoogleOAuthProvider>
+                        </div>
+
+                    </div>
                 </form>
             </div>
         </>)

@@ -1,5 +1,5 @@
-import React, { useState,useEffect } from "react";
-import { Link,useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "../styles/loginPage.css"
 // import { GoogleLogin } from '@react-oauth/google';
 // import { GoogleOAuthProvider } from '@react-oauth/google';
@@ -81,26 +81,34 @@ function Signup() {
     return (
         <>
             {message && <h1 className={messageClass}>{message}</h1>}
-            <div className="container">
-                <form onSubmit={handleSubmit}>
-                    <div className="mb-3">
-                        <label htmlFor="name" className="form-label">Name</label>
-                        <input type="text" className="form-control" name="name" value={credentials.name} onChange={onchange} />
+            <div className="container-div">
+                <div className="background-img-div"></div>
+                <form onSubmit={handleSubmit} className="form">
+                    <div className="form-image-div">
+                        <img src="https://wallpapers.com/images/hd/cute-dog-1920-x-1080-background-9kqevqyf8tjf2v24.jpg" className="form-image" />
                     </div>
-                    <div className="mb-3">
-                        <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" value={credentials.email} onChange={onchange} />
+                    <div className="form-inputs-div">
+                        <div className="form-inputs">
+                            <i class="fa-regular fa-user"></i>
+                            <input type="text" name="name" value={credentials.name} onChange={onchange} placeholder="USERNAME" />
+                        </div>
+                        <div className="form-inputs">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input type="email" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" value={credentials.email} onChange={onchange} placeholder="EMAIL" />
+                        </div>
+                        <div className="form-inputs">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="exampleInputPassword1" name="password" value={credentials.password} onChange={onchange} placeholder="PASSWORD" />
+                        </div>
+                        <div className="form-inputs">
+                            <i class="fa-solid fa-location-pin"></i>
+                            <input type="text" name="location" value={credentials.location} onChange={onchange} placeholder="Location" />
+                        </div>
+                        <p className="new-user"><Link to="/login">Already a User</Link></p>
+                        <div className="login-button">
+                            <button type="submit">Register</button>
+                        </div>
                     </div>
-                    <div className="mb-3">
-                        <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                        <input type="password" className="form-control" id="exampleInputPassword1" name="password" value={credentials.password} onChange={onchange} />
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="location" className="form-label">Address</label>
-                        <input type="text" className="form-control" name="location" value={credentials.location} onChange={onchange} />
-                    </div>
-                    <button type="submit" className="btn btn-success">Submit</button>
-                    <Link to="/login" className="m-3 btn btn-danger">Already a User</Link>
                 </form>
                 {/* <GoogleOAuthProvider clientId="974043168419-q18pohug8nlnqcfsavtvh1ctggg9g2jk.apps.googleusercontent.com" >
                         <GoogleLogin

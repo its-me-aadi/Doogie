@@ -1,99 +1,139 @@
-.stepsToAdopt {
-    margin: 14% 0% 14% 0%;
+.section{
+    margin: -5% 0% 12% 0%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
+    font-style:handjet;
 }
-
-.stepsToAdopt h1 {
-    color: #00bc8c;
-    font-size: 40px;
-}
-.animation-textdiv {
+.steps-to-adopt{
+    color: whitesmoke;
     display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 350px;
     justify-content: center;
-}
+    background-color: rgba(135,249,212,0.06);
 
-.stepsAdoptimgDiv {
-    width: 40%;
-    margin-right: 7%;
 }
-
-.stepsAdopt {
-    font-family: "Montserrat", sans-serif;
-    font-size: 19.4px;
+.steps-to-adopt-left-section{
+    display: flex;  
+    flex-direction: column;
+    color: whitesmoke;
+    width: 30%;
+    height: 85%;
+    margin: 3% 2% 0% 2%;
+    list-style: none;
+    background:rgba(30,30,30,0.6);
+    /* background: linear-gradient(180deg, skyblue, purple); */
+    border-radius: 0px solid rgba(135,249,212,.06);
+    border-radius: 10px;
+    z-index: 2;
+}
+.steps-to-adopt-right-section{
     display: flex;
     flex-direction: column;
-    line-height: 37px;
-    justify-content: space-evenly;
-    width: 50%;
-    height: 300px;
+    width: 55%;
+    height: 85%;
+    margin: 3% 2% 0% 2%;
+    color: whitesmoke;
+    /* background-color: #967DBE; */
+    background: linear-gradient(0deg, skyblue, purple);
+
+    opacity: 0.9;
+    border-radius: 2%;
+}
+.steps-to-adopt-heading-and-animation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.steps-to-adopt-heading{
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-image:linear-gradient(100.51deg, #c08fe9 0%, #49267d 100%);
+    font-weight: 1000;
+    font-size: 49px;
+    letter-spacing: 0;
+    margin:40% 0% 2% 4%;
+    color: aliceblue;
+    font-family: 'Jost';
+    font-style: normal;
+    
+}
+.steps-to-adopt-right-section-heading{
+    font-size: 24px;
+    font-weight: 800;
+    margin: 2% 0% 0% 5%;
+}
+.steps-to-adopt-right-section-list{
+    margin: 4% 0% 0% 5%;
+    line-height: 34px;
+    
+}
+.steps-to-adopt-right-section-listitems{
+    list-style: none;
+    font-size: 17px;
+    color: white;
+    font-weight: 600;
+}
+.steps-to-adopt-right-section-listitems::before{
+    content: "\00BB";
+}
+.steps-to-adopt-left-section-butttons{
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 0%;
+    color: whitesmoke;
+    /* background:linear-gradient(0deg,#0F2027,#203A43,#2C5364); */
+    /* background-image: url("https://img.freepik.com/premium-photo/remote-corner-universe_94937-265.jpg?w=450"); */
+    cursor:pointer;
+    opacity: 0.6;
+    border-radius: 4px;
+    z-index: 3;
 }
 
-.stepsAdopt p {
-   width: 100%;
-}
 
-
-@media only screen and (max-width:1200px) {
-    .stepsToAdopt {
-        margin-bottom: 260px;
+@media only screen and (max-width: 600px) {
+    
+    .section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 200px;
+        margin-bottom: 140px;
+        max-width: 100%;
+        width: 100%;
     }
-    .stepsToAdopt {
-        margin-bottom: 10%;
+    .steps-to-adopt{
+        margin-top: 60px;
+        display: flex;
+      flex-direction: column;  
+      height: fit-content; 
     }
     
-    .animation-textdiv {
-        justify-content: space-between;
-    }
-    .stepsAdoptimgDiv{
-        width: 300px;
-        height: 300px;
-    }
-    .stepsAdopt{
-        font-size: 15px;
-    }
-}
-@media only screen and (max-width:1000px) {
-    .stepsToAdopt {
-        margin-bottom: 260px;
-    }
-
-    .stepsAdoptimgDiv{
-        width: 200px;
-        height: 200px;
-    }
-    .stepsAdopt{
-        
+    .steps-to-adopt-left-section{
         display: flex;
-        font-size: 15px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin: 10% 0% 2% 10%;
     }
-}
-@media only screen and (max-width:700px) {
-    .stepsToAdopt {
-        margin-bottom: 260px;
+    .steps-to-adopt-left-section-butttons{
+        width: 100%;
+        height: 60px;
+        font-size: 12px;
+        font-weight: 500;
+        margin-top: 0%;
     }
-
-    .stepsAdoptimgDiv{
-        width: 150px;
-        height: 150px;
+    .steps-to-adopt-right-section{
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        margin: 5% 0% 6% 8%;
     }
-    .stepsAdopt{
-        font-size: 15px;
+    .steps-to-adopt-animation{
+        display: none;
     }
-}
-
-@media only screen and (max-width:500px) {
-    .stepsToAdopt {
-        margin-bottom: 260px;
-    }
-
-    .stepsAdoptimgDiv{
-        width: 100px;
-        height: 100px;
-    }
-    .stepsAdopt{
-        font-size: 13px;
-    }
-}
+  }

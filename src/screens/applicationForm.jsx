@@ -74,9 +74,10 @@ export default function ApplicationForm() {
             }
         }
     }
-    const IMgSrc="https://img.freepik.com/premium-photo/cartoon-boy-dog-sitting-sidewalk-city-generative-ai_902846-28220.jpg"
+    const IMgSrc = "https://w0.peakpx.com/wallpaper/512/605/HD-wallpaper-adventure-time-jake-the-dog-and-finn-the-human-jake-the-dog-finn-the-human-animated.jpg"
     return (
         <div className='main-div'>
+            <div className="form-background-img-div"></div>
             <div>
                 {/* <img src={formImg} alt="login_img" className='login-image' /> */}
                 <img src={IMgSrc} alt="login_img" className='login-image' />
@@ -87,19 +88,19 @@ export default function ApplicationForm() {
                     <h2>Details</h2>
                 </div>
                 <div>
-                    <p>Name</p>
-                    <input type='text' name="name" value={credentials.name} onChange={change} placeholder='Person adopting the dog' required />
+                    <i class="fa-regular fa-user"></i>
+                    <input type='text' name="name" value={credentials.name} onChange={change} placeholder='Name' required />
                 </div>
                 <div>
-                    <p>Email</p>
-                    <input type='email' name="email" value={credentials.email} onChange={change} placeholder='Person adopting the dog' required />
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type='email' name="email" value={credentials.email} onChange={change} placeholder='Mail' required />
                 </div>
                 <div>
-                    <p>Contact Number</p>
+                    <i class="fa-solid fa-phone"></i>
                     <input type='number' name="phoneNum" value={credentials.phoneNum} onChange={change} minLength={10} maxLength={10} required placeholder='10 digit mobile number' />
                 </div>
                 <div>
-                    <p>Address</p>
+                <i class="fa-solid fa-map-location-dot"></i>
                     <textarea rows={3} name="address" cols={22} value={credentials.address} onChange={change} required />
                 </div>
                 <div>
@@ -109,42 +110,5 @@ export default function ApplicationForm() {
                 </div>
             </div>
         </div>
-        ////////////////////////////////////
-        //     <div className='main-div'>
-        //   <div>
-        //     <img src={LGIMAGE} alt="login_img" className='login-image' />
-        //   </div>
-        //   <div className='credentials-div'>
-        //     <div>
-        //       <h2>Login</h2>
-        //     </div>
-        //     <div>
-        //       <p>E-mail address</p>
-        //       <input type='email' name="email" value={credentials.email} onChange={change} />
-        //     </div>
-        //     <div>
-        //       <p>Password</p>
-        //       <input type='password' name="password" value={credentials.password} onChange={change} />
-        //     </div>
-        //     <div>
-        //       <Button variant="contained" color="success" onClick={()=>{
-        //         navigate("/");
-        //       }}>
-        //         Login
-        //       </Button>
-        //     </div>
-        //     <div style={{ flexDirection: 'row' }}>
-        //       <hr style={{ width: "40%" }}></hr>OR
-        //       <hr style={{ width: "40%" }}></hr>
-        //     </div>
-        //     <div>
-        //         <Button variant="outlined" color="error" onClick={()=>{
-        //           navigate("/register");
-        //         }}> 
-        //         Register
-        //         </Button>
-        //     </div>
-        //   </div>
-        // </div>
     )
 }
